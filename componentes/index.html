@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes Web</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #cajaTexto {
+            display: none;
+            transition: all 0.5s ease;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+        .fade-out {
+            opacity: 1;
+            animation: fadeOut 0.5s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Desarrollo Web</h1>
+
+        
+        <div class="text-center mb-5">
+            <button id="mostrarBtn" class="btn btn-primary">Mostrar Caja de Texto</button>
+            <button id="ocultarBtn" class="btn btn-danger" style="display: none;">Ocultar Caja de Texto</button>
+        </div>
+        <div id="cajaTexto" class="text-center">
+            <input type="text" class="form-control" placeholder="Escribe algo..." style="max-width: 300px; margin: auto;">
+        </div>
+
+        
+        <div class="form-group mt-5">
+            <label for="numHijos">Número de hijos</label>
+            <input type="number" class="form-control" id="numHijos" placeholder="Ingresa el número de hijos">
+        </div>
+        <div id="hijosForm"></div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
